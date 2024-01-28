@@ -1,0 +1,77 @@
+<!--At least two pages
+    A Bootstrap navbar, 
+        table, 
+            and form
+    Bootstrap grid used throughout to format elements
+    Elements should stack vertically when the window is small-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpMePlz ~ Wish Away</title>
+      <!--to link the bootstrap styles to the html doc-->
+      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+      <!--to link the general style sheet to the html doc; created to avoid inline styling; listed afterwards because cascading-->
+      <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="container">
+    <!-- This is the navbar. It goes at the top inside the body container tag-->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(208, 132, 234);">
+         <a class="navbar-brand" href="index.html"><b>HelpMePlz</b></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+         <!--needed to add "Click!" because changing the color of the navbar made the icon go away, even though the spot still could be clicked-->    
+         <span class="navbar-toggler-icon">Click!</span>
+         </button>
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+         <ul class="navbar-nav">
+             <li class="nav-item active">
+                 <a class="nav-link" href="index.html">Home</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="wish-away.html">Wish Away</a>
+             </li>
+             <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" 
+                 aria-haspopup="true" aria-expanded="false">
+                     Ways I'm coping
+                 </a>
+                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <a class="dropdown-item" href="https://www.youtube.com/watch?v=XtAhISkoJZc">silly thought about tables</a>
+                     <a class="dropdown-item" href="https://thenicestplace.net/">get some hugs</a>
+                     <a class="dropdown-item" href="https://www.youtube.com/watch?v=lAIGb1lfpBw">cute cat parade</a>
+                 </div>
+             </li>
+         </ul>
+     </div>
+     </nav>
+    <br>
+    <p>Sometimes, it helps to be able to get it out of your system. Please use the form below and send your concerns into
+        the <s>void</s> <i>universe</i>!
+    </p>
+<!--here is my form! styled in the css sheet-->
+<form>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    </div>
+</div>
+<br>
+<div class="input-group input-group-lg">
+  <!--I was happy to be able to use a placeholder and put a silly phrase in there that goes away, and it's easy to make accesible also :)-->
+    <textarea class="form-control" placeholder="Tell the nice text box your worries..." aria-label="Tell the nice text box your worries!"></textarea>
+    <button class="btn btn-primary" type="submit">YEET~</button> <!--this was my favorite bit of the project!-->
+</div>
+</form>
+
+<!--to link the bootstrap styles to the html doc-->
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
